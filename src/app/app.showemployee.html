@@ -1,0 +1,20 @@
+
+
+<h2>Show All Employee</h2>
+
+<table border="1">
+    <tr>
+        <th>EmployeeId</th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+    </tr>
+
+    <tr *ngFor="let data of empAll;let i=index" >
+        <td>{{data.empId}}</td>
+        <td>{{data.empName}}</td>
+        <td>{{data.empSalary}}</td>
+        <td><input type="button" value="DELETE" (click)="deleteEmployee(i)"/></td>
+    </tr>
+</table>
+<!-- {{inchild}} -->
+{{empId}}{{empName}}{{empSalary}}

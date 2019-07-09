@@ -1,0 +1,31 @@
+<!---Employee id is {{empId}}<br/>
+Employee Name is {{empName}}<br/>
+Employee Salary is {{empSalary}}<br/>
+
+<input type="button" value="ADD DATA" ()="addEmployee()" />--->
+
+
+<table>
+        <tr>
+                <td>Employee ID</td>
+                <td><input type="number" [(ngModel)]="empId"/></td>
+        </tr>
+    
+        <tr>
+                <td>Employee Name</td>
+                <td><input type="text" [(ngModel)]="empName"/></td>
+        </tr>
+    
+        <tr>
+                <td>Employee Salary</td>
+                <td><input type="number" [(ngModel)]="empSalary"/></td>
+        </tr>
+
+        <tr>
+                <td><input type="button" value="ADD DATA" (click)="toShow()" /></td>
+        </tr>
+</table>
+
+<div *ngIf="status">
+        <show [empId]="empId" [empName]="empName" [empSalary]="empSalary" ></show>
+</div>
